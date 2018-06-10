@@ -1,6 +1,6 @@
 function view () {
+  let randomIndex = Math.floor(Math.random() * 10)
   let children = [...Array(5).keys()].map(i => {
-    let randomIndex = Math.floor(Math.random() * 10)
     return h('li',{key:++randomIndex },randomIndex)
   })
   return h('ul', children )
